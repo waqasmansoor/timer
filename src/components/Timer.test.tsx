@@ -40,14 +40,14 @@ describe("Mounted Timer",()=>{
     it("render startTimer function which will change running state to on",()=>{
         
 
-        container.find('.start-timer').first().simulate('click')
+        container.find('TimerButton').first().simulate('click')
         expect(setStateFunc).toBeCalledWith({running:'on'})
 
     })
-    it("render stopTimer function which will change running state to off",()=>{
+    it("render pauseTimer function which will change running state to off",()=>{
         
 
-        container.find('.stop-timer').first().simulate('click')
+        container.find('.pause-timer').first().simulate('click')
         expect(setStateFunc).toBeCalledWith({running:'off'})
 
     })

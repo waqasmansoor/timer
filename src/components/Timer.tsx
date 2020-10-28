@@ -15,8 +15,8 @@ const  Timer=()=>{
     
     
 function startTimer(){
+    setTime({...time,running:'on'})
     
-    if(time.running==='off'){
         let sec=time.seconds
         let min=time.minutes
         setTime({...time,running:'on'})
@@ -54,7 +54,7 @@ function startTimer(){
         },1000)
     setShowResume(false)
     setStartBtnDsbld(true)
-    }
+    
 }
 function pauseTimer(){
     window.clearInterval(myIntrvl)
